@@ -9,15 +9,13 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = ({ children, variant, ...props }: Props) => {
     if (variant === 'ghost') {
         return (
-            <GhostButton {...props}
-                className="">{children}
+            <GhostButton {...props}>{children}
             </GhostButton>
         );
     };
 
     return (
-        <MainButton {...props}
-        className="">{children}
+        <MainButton {...props}>{children}
         </MainButton>
     );
 };
